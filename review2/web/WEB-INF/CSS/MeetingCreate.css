@@ -1,0 +1,239 @@
+@font-face{
+    font-family: 'HANYIXUEJUN';
+    src : url('../fonts/HANYIXUEJUN.TTF');
+}
+body{
+	background:url(../images/Background.jpg);
+    background-origin:content;
+    background-position:center 0;
+    background-size:cover; 
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    position:absolute;
+    width:100%;
+    height:100%;
+    margin: 0px;
+    padding: 0px;
+    line-height: 0;
+    overflow: auto;
+}
+#CrtTitle{
+	font-family: 'HANYIXUEJUN';
+	font-size:100px;
+	color:white;
+	position:absolute;
+	margin-top:-4%;
+	margin-left:19%;
+	width:70%;
+	min-width:1600px;
+}
+#CrtTopBox{
+	width: 800px;
+	height: 600px;
+	position:absolute;
+	margin-top:-5%;
+	left:70%;
+	min-width:800px;
+	//border: 1px solid #E2E3E5;
+}
+#CreateWelcome{
+	width: 40%;
+	position:relative;
+	//border: 1px solid #E2E3E5;
+	margin:auto auto auto auto;
+	font-size:25px;
+	color:#FFFFFF;
+	text-align:center;
+}
+#CreateJump{
+	width: 30%;
+	position:relative;
+	//border: 1px solid #E2E3E5;
+	margin:3% auto auto auto;
+}
+#CreateMeetingManageBtn{
+	border: 1px solid #E2E3E5;
+	font: 18px Arial;
+	width:100px;
+	height:30px;
+	display:inline-block;
+	vertical-align:middle;
+	background:#FFFFFF;
+	box-shadow: 0px 1px 3px rgba(34, 25, 25, 0.2);
+}
+#CreateLoginBtn{
+	border: 1px solid #E2E3E5;
+	margin-left:10px;
+	font: 18px Arial;
+	width:100px;
+	height:30px;
+	display:inline-block;
+	vertical-align:middle;
+	background:#FFFFFF;
+	box-shadow: 0px 1px 3px rgba(34, 25, 25, 0.2)
+}
+#CrtLeftBox{
+	position:absolute;
+    //border: 1px solid #E2E3E5;
+    width: 30%;
+	height: 670px;
+	box-shadow: 10px 10px 30px #888888;
+    top:150px;
+    left:15%;
+	background:#FFFFFF;
+	opacity:0.9;
+	min-height:650px;
+	min-width:600px;
+}
+#CrtRightBox{
+	position:absolute;
+    //border: 1px solid #E2E3E5;
+    width: 43%;
+	height: 670px;
+	box-shadow: 10px 10px 30px #888888;
+    top:820px;
+    left:53%;
+    //right:-2%;
+	background:#FFFFCC;
+	margin:-670px 200px auto auto;
+	background:#FFFFFF;
+	opacity:0.9;
+	min-height:650px;
+	min-width:820px;
+}
+#Box{
+	position:relative;
+	overflow-x:hidden;
+	overflow-y:scroll;
+    -webkit-overflow-scrolling: touch;
+    height:600px;
+    width:800px;
+    margin-top:5px;
+    margin-left:5px;
+}
+#UserTable{
+    margin-top: 0px;
+    margin-left: 10px;
+}
+#InputTable{
+	position:relative;
+	margin-top:20px;
+	margin-left: 12px;
+}
+#CreateAdd{
+	border: 1px solid #E2E3E5;
+	font: 20px Arial;
+	width:100px;
+	height:30px;
+	display:inline-block;
+	vertical-align:middle;
+	background:#FFFFFF;
+	box-shadow: 0px 1px 3px rgba(34, 25, 25, 0.2);
+}
+#CrtBottomBox{
+	position:absolute;
+	width:30%;
+	height:5%;
+	top:850px;
+	left:38%;
+	min-width:600px;
+}
+#CreateRelease{
+	border: 1px solid #E2E3E5;
+	font: 25px Arial;
+	width:100px;
+	height:35px;
+	display:inline-block;
+	vertical-align:middle;
+	margin-left:10px;
+	background:#FFFFFF;
+	box-shadow: 0px 1px 3px rgba(34, 25, 25, 0.2);
+}
+#CreateSave{
+	border: 1px solid #E2E3E5;
+	font: 25px Arial;
+	width:150px;
+	height:35px;
+	display:inline-block;
+	vertical-align:middle;
+	margin-left:40px;
+	//margin-top:50px;
+	background:#FFFFFF;
+	box-shadow: 0px 1px 3px rgba(34, 25, 25, 0.2);
+}
+#CreateReset{
+	border: 1px solid #E2E3E5;
+	font: 25px Arial;
+	width:100px;
+	height:35px;
+	display:inline-block;
+	vertical-align:middle;
+	margin-left:40px;
+	//margin-top:50px;
+	background:#FFFFFF;
+	box-shadow: 0px 1px 3px rgba(34, 25, 25, 0.2);
+}
+#CreateDelete{
+	 width:100px;
+	 height:30px;
+	 font-size:20px;
+}
+.form-control {
+  display: block;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.35rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.form-control::-ms-expand {
+  background-color: transparent;
+  border: 0;
+}
+.form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+.form-control::-webkit-input-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+.form-control::-moz-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+.form-control:-ms-input-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+.form-control::-ms-input-placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+.form-control::placeholder {
+  color: #6c757d;
+  opacity: 1;
+}
+.form-control:disabled, .form-control[readonly] {
+  background-color: #e9ecef;
+  opacity: 1;
+}
+select.form-control:focus::-ms-value {
+  color: #495057;
+  background-color: #fff;
+}
+.form-control-range {
+  display: block;
+
+}
+.form-control-plaintext {
+  display: block; 
+  margin-bottom: 0;
+  background-color: transparent;
+  border: solid transparent;
+  border-width: 1px 0;
+}
