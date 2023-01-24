@@ -3,6 +3,7 @@ package com.example.demo.edu.controller;
 
 import com.example.R;
 import com.example.demo.edu.entity.vo.CourseInfoVo;
+import com.example.demo.edu.entity.vo.CoursePublishVo;
 import com.example.demo.edu.service.EduCourseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -30,4 +31,29 @@ public class EduCourseController {
         String id = courseService.saveCourseInfo(courseInfoVo);
         return R.ok().data("courseId",id);
     }
+
+
+
+    //根据课程查询基本信息
+    @GetMapping("getCourseInfo/{courseId}")
+    public R getCourseInfo(@PathVariable String courseId){
+       CourseInfoVo courseInfoVo= courseService.getCourseInfo(courseId);
+
+        return  R.ok().data("courseInfoVo",courseInfoVo);
+    }
+
+    //修改课程信息
+    @PostMapping("updateCourseInfo")
+    public R updateCourseInfo(@RequestBody CourseInfoVo courseInfoVo){
+        courseService.updateCourseInfo(courseInfoVo);
+        return R.ok();
+    }
+
+    //select info by courseId
+    @GetMapping("getPublishCourseInfo/{id}")
+    public R get(@PathVariable String id){
+       CoursePublishVo coursePublishVo= courseService.publishCourseInfo(id);
+        return R.ok().data("publishCourse",coursePublishVo);
+    }
+
 }

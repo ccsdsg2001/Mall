@@ -7,6 +7,7 @@ import com.example.demo.edu.entity.CourseDescription;
 import com.example.demo.edu.entity.EduCourse;
 import com.example.demo.edu.entity.vo.CourseInfoVo;
 
+import com.example.demo.edu.entity.vo.CoursePublishVo;
 import com.example.demo.edu.mapper.CourseMapper;
 import com.example.demo.edu.service.CourseDescriptionService;
 
@@ -31,6 +32,8 @@ public class EduCourseServiceImpl extends ServiceImpl<CourseMapper, EduCourse> i
     //课程描述注入
     @Autowired
     private CourseDescriptionService courseDescriptionService;
+
+
 
     //添加课程基本信息的方法
     @Override
@@ -57,5 +60,43 @@ public class EduCourseServiceImpl extends ServiceImpl<CourseMapper, EduCourse> i
         courseDescriptionService.save(courseDescription);
 
         return cid;
+    }
+
+    @Override
+    public CourseInfoVo getCourseInfo(String courseId) {
+        //查询课程表
+        EduCourse eduCourse = baseMapper.selectById(courseId);
+        CourseInfoVo courseInfoVo = new CourseInfoVo();
+        BeanUtils.copyProperties(eduCourse,courseInfoVo);
+
+
+        //查询描述表
+        CourseDescription byId = courseDescriptionService.getById(courseId);
+        courseInfoVo.setDescription(byId.getDescription());
+
+        return courseInfoVo ;
+    }
+
+    //修改课程信息
+    @Override
+    public void updateCourseInfo(CourseInfoVo courseInfoVo) {
+        EduCourse eduCourse = new EduCourse();
+        BeanUtils.copyProperties(courseInfoVo,eduCourse);
+        int update = baseMapper.updateById(eduCourse);
+        if(update==0){
+            throw new fuliexception(20001,"修改失败");
+        }
+
+        //修改描述表
+        CourseDescription courseDescription = new CourseDescription();
+        courseDescription.setId(courseInfoVo.getId());
+        courseDescription.setDescription(courseDescription.getDescription());
+        courseDescriptionService.updateById(courseDescription);
+    }
+
+    @Override
+    public CoursePublishVo publishCourseInfo(String courseId) {
+        CoursePublishVo publishCourseInfo = baseMapper.getPublishCourseInfo(courseId);
+        return publishCourseInfo;
     }
 }
