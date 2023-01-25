@@ -9,10 +9,12 @@ import com.example.demo.edu.entity.vo.CourseInfoVo;
 
 import com.example.demo.edu.entity.vo.CoursePublishVo;
 import com.example.demo.edu.mapper.CourseMapper;
+import com.example.demo.edu.service.ChapterService;
 import com.example.demo.edu.service.CourseDescriptionService;
 
 
 import com.example.demo.edu.service.EduCourseService;
+import com.example.demo.edu.service.VideoService;
 import com.example.exception.fuliexception;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,6 +35,11 @@ public class EduCourseServiceImpl extends ServiceImpl<CourseMapper, EduCourse> i
     @Autowired
     private CourseDescriptionService courseDescriptionService;
 
+    @Autowired
+    private VideoService  videoService;
+
+    @Autowired
+    private ChapterService chapterService;
 
 
     //添加课程基本信息的方法
@@ -98,5 +105,20 @@ public class EduCourseServiceImpl extends ServiceImpl<CourseMapper, EduCourse> i
     public CoursePublishVo publishCourseInfo(String courseId) {
         CoursePublishVo publishCourseInfo = baseMapper.getPublishCourseInfo(courseId);
         return publishCourseInfo;
+    }
+
+    @Override
+    public void removeCourse(String courseId) {
+        //DELETE SECOND TITLE by courseid
+        videoService.removeVideoBycourseID(courseId);
+        //delete title by id
+        chapterService.removeChapterByCourseId(courseId);
+
+        courseDescriptionService.removeById(courseId);
+
+        int i = baseMapper.deleteById(courseId);
+        if(i==0){
+            throw new fuliexception(20001,"删除失败");
+        }
     }
 }

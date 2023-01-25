@@ -24,4 +24,6 @@ public interface EduCourseService extends IService<EduCourse> {
     void updateCourseInfo(CourseInfoVo courseInfoVo);
 
     CoursePublishVo publishCourseInfo(String courseId);
+
+    void removeCourse(String courseId);
 }
