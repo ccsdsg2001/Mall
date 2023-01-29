@@ -12,7 +12,7 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan({"com.example"})
 public class applicationMAIN {
      public static void main(String[] args) {
-           SpringApplication.run(applicationMAIN.class, args);
+           SpringApplication.run(applicationMAIN.class, args);//
       }
      
 }
