@@ -21,6 +21,8 @@
         <module>service_acl</module>
         <module>service_msn</module>
         <module>service_ucenter</module>
+        <module>service_order</module>
+        <module>service_statistics</module>
     </modules>
 
 

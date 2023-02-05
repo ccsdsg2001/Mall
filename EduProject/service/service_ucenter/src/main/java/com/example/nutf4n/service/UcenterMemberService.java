@@ -20,4 +20,6 @@ public interface UcenterMemberService extends IService<UcenterMember> {
 
     UcenterMember getOpenIdMember(Object openid);
 
+    Integer countRegister(String day);
+
 }

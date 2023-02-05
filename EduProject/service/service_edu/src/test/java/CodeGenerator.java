@@ -15,7 +15,7 @@ import org.junit.Test;
  */
 public class CodeGenerator {
 
-//    @Test
+    @Test
     public void run() {
 
         // 1、创建代码生成器
@@ -56,7 +56,7 @@ public class CodeGenerator {
 
         // 5、策略配置
         StrategyConfig strategy = new StrategyConfig();
-        strategy.setInclude("edu_course","edu_video","edu_course_description","edu_chapter");
+        strategy.setInclude("edu_comment");
         strategy.setNaming(NamingStrategy.underline_to_camel);//数据库表映射到实体的命名策略
         strategy.setTablePrefix(pc.getModuleName() + "_"); //生成实体时去掉表前缀
 

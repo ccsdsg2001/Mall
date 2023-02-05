@@ -6,6 +6,8 @@ import com.example.R;
 import com.example.nutf4n.entity.UcenterMember;
 import com.example.nutf4n.entity.vo.RegisterVo;
 import com.example.nutf4n.service.UcenterMemberService;
+import com.example.ordervo.UcenterMemberOrder;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -54,6 +56,27 @@ public class UcenterMemberController {
     return R.ok().data("userInfo",member);
 
     }
+
+
+    @PostMapping("getUserInfoOrder/{id}")
+    public UcenterMemberOrder getuseinfo(@PathVariable String id){
+        UcenterMember member = memberService.getById(id);
+        UcenterMemberOrder ucenterMemberOrder = new UcenterMemberOrder();
+        BeanUtils.copyProperties(member,ucenterMemberOrder);
+
+        return ucenterMemberOrder;
+
+    }
+
+
+
+    //show one day register
+    @GetMapping("conuntRegister/{day}")
+    public R countRegister(@PathVariable String day){
+        Integer count=memberService.countRegister(day);
+        return R.ok().data("countRegister",count);
+    }
+
 
 
 }

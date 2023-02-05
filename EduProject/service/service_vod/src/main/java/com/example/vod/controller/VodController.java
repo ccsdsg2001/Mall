@@ -4,6 +4,8 @@ import com.aliyuncs.DefaultAcsClient;
 import com.aliyuncs.exceptions.ClientException;
 import com.aliyuncs.vod.model.v20170321.DeleteVideoRequest;
 import com.aliyuncs.vod.model.v20170321.DeleteVideoResponse;
+import com.aliyuncs.vod.model.v20170321.GetVideoPlayAuthRequest;
+import com.aliyuncs.vod.model.v20170321.GetVideoPlayAuthResponse;
 import com.example.R;
 import com.example.exception.fuliexception;
 import com.example.vod.service.VodService;
@@ -57,5 +59,25 @@ public class VodController {
     public R delte(@RequestParam("videoIdList") List<String> videoIdList){
         vodService.removeMoreVideo(videoIdList);
         return  R.ok();
+    }
+    
+    
+    //get ticket by videoID
+    @GetMapping("getPlayAuth/{id}")
+    public R getticket(@PathVariable String id){
+        try {
+            DefaultAcsClient client = InitVodClient.initVodClient(ConstantUtils.ACCESS_KEY_ID, ConstantUtils.ACCESS_KEY_SECRET);
+            //object
+            GetVideoPlayAuthRequest request = new GetVideoPlayAuthRequest();
+            request.setVideoId(id);
+            //call method
+            GetVideoPlayAuthResponse response = client.getAcsResponse(request);
+            String playAuth = response.getPlayAuth();
+            return R.ok().data("playAuth", playAuth);
+        }catch (Exception e){
+            throw new fuliexception(20001,"fail");
+
+
+        }
     }
 }
