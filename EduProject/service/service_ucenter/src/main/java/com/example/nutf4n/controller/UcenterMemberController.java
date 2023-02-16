@@ -23,7 +23,7 @@ import javax.servlet.http.HttpServletRequest;
  */
 @RestController
 @RequestMapping("/educenter/member")
-@CrossOrigin
+//@CrossOrigin
 public class UcenterMemberController {
 
     @Autowired
@@ -77,6 +77,15 @@ public class UcenterMemberController {
         return R.ok().data("countRegister",count);
     }
 
+
+    @PostMapping("getInfoUc/{id}")
+    public UcenterMemberOrder getinfo(@PathVariable String id){
+        //get user info by id
+        UcenterMember byId = memberService.getById(id);
+        UcenterMemberOrder ucenterMemberOrder = new UcenterMemberOrder();
+        BeanUtils.copyProperties(byId, ucenterMemberOrder);
+        return ucenterMemberOrder;
+    }
 
 
 }

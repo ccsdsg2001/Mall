@@ -1,8 +1,8 @@
 package com.atguigu.serurity.security;
 
 
-import com.example.R;
-import com.example.ResponseUtil;
+import example.R;
+import example.ResponseUtil;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.web.authentication.logout.LogoutHandler;

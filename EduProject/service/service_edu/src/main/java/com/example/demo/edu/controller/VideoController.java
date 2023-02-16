@@ -5,7 +5,9 @@ import com.example.R;
 import com.example.demo.edu.Client.VodClient;
 import com.example.demo.edu.entity.Video;
 import com.example.demo.edu.service.VideoService;
-import com.example.exception.fuliexception;
+
+
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
@@ -20,7 +22,7 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 @RequestMapping("/eduservice/video")
-@CrossOrigin
+//@CrossOrigin
 public class VideoController {
 
     @Autowired

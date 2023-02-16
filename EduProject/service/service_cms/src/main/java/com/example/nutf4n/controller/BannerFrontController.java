@@ -20,7 +20,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/educms/bannerfront")
-@CrossOrigin
+//@CrossOrigin
 public class BannerFrontController {
 
     @Autowired
@@ -30,8 +30,8 @@ public class BannerFrontController {
     @GetMapping("getAllBanner")
     @Cacheable(key = "'selectIndexList'",value = "banner")
     public R get(){
-        List<CrmBanner> list =bannerService.selectALLBanner();
-        return R.ok().data("list", list);
+        List<CrmBanner> IdontKnowthisFault =bannerService.selectALLBanner();
+        return R.ok().data("IdontKnowthisFault", IdontKnowthisFault);
     }
 
 }

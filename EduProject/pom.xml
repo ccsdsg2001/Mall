@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+
     <modelVersion>4.0.0</modelVersion>
     <modules>
         <module>service</module>
@@ -8,6 +10,8 @@
         <module>canal_clientedu</module>
         <module>infrastructure</module>
     </modules>
+
+
 
 
     <parent>
@@ -53,6 +57,7 @@
     <docker.image.prefix>zx</docker.image.prefix>
     <cloud-alibaba.version>0.2.2.RELEASE</cloud-alibaba.version>
     </properties>
+
 
     <dependencyManagement>
     <dependencies>
@@ -175,11 +180,11 @@
         <artifactId>aliyun-java-sdk-vod</artifactId>
         <version>${aliyun-java-sdk-vod.version}</version>
     </dependency>
-        <dependency>
-            <groupId>com.aliyun</groupId>
-            <artifactId>aliyun-java-vod-upload</artifactId>
-            <version>${aliyun-java-vod-upload.version}</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.aliyun</groupId>-->
+<!--            <artifactId>aliyun-java-vod-upload</artifactId>-->
+<!--            <version>${aliyun-java-vod-upload.version}</version>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>com.aliyun</groupId>
             <artifactId>aliyun-sdk-vod-upload</artifactId>
@@ -208,17 +213,39 @@
             <version>${canal.client.version}</version>
         </dependency>
     </dependencies>
+
+
+
     </dependencyManagement>
 
 
 
     <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
+        <finalName>NutF4n</finalName>
+
+            <plugins>
+                <plugin>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <configuration>
+                        <source>1.8</source>
+                        <target>1.8</target>
+                    </configuration>
+                </plugin>
+            </plugins>
+
+<!--        <plugins>-->
+<!--            <plugin>-->
+<!--                <groupId>org.springframework.boot</groupId>-->
+<!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
+<!--                <configuration>-->
+<!--                    &lt;!&ndash;本地依赖的system作用域包打包到项目jar &ndash;&gt;-->
+<!--                    <includeSystemScope>true</includeSystemScope>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
+
+
+<!--        </plugins>-->
     </build>
+
 
 </project>

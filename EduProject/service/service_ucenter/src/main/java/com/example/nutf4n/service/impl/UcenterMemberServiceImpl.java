@@ -3,7 +3,7 @@ package com.example.nutf4n.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.example.JwtUtils;
 import com.example.MD5;
-import com.example.exception.fuliexception;
+
 import com.example.nutf4n.entity.UcenterMember;
 import com.example.nutf4n.entity.vo.RegisterVo;
 import com.example.nutf4n.mapper.UcenterMemberMapper;

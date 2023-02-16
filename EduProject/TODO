@@ -1,6 +1,88 @@
+bug：首頁 banner 無法顯示 ，登錄token出現問題
 1.评论模块
+
 2.订单模块 跳转生成  问题
 
 service:nacos + redis
 
 权限管理：菜单问题  bug
+权限管理：数据库 acl_permission
+
+
+上线部署
+
+
+cloud 网关 中去掉各个服务的crossorigin
+
+微服务部署 将各个服务打包成jar包
+
+Tips：启动后端接口 启动前端
+
+本项目功能
+1.登录功能（Springsecurity框架）
+2.权限管理功能 （1）菜单管理 （2）角色管理 （3）用户管理 （4）权限管理表和关系 使用5张表
+3.讲师管理模块 （1）条件查询分类
+4.课程分类模块  （1）课程列表 （2）课程分类
+5.课程管理模块
+6.统计分析模块
+
+前台功能
+1.首页数据显示 （1）显示幻灯片功能（2）显示课程和名师
+2.注册功能 （1）获取手机验证功能 整合阿里云短信服务
+3.登录功能 （1）普通登录  单点登录SSO  使用
+<1> 登录方式:cookie+redis实现 发送请求带着cookie发送 (1)把cookie获取值 放到redis中查询,查询到就是登录
+<2> session广播
+<3> 使用token登录 将登录信息保存到token中 放到request中的header 后端接口获取header 使用jwt生成token
+（2）微信扫码登录 OAuth2  微信接口返回code 用code请求微信固定地址得到accesstoken和openid 再这两去请求微信固定地址,得到扫描人信息
+4.名师列表
+5.名师详情
+6.课程列表 (1)条件查询分页功能
+7.课程详情页 (1)课程信息显示 (2)判断课程是否需要购买
+8.课程视频在线播放
+9.课程支付功能（微信支付） <1> 生成订单 <2> 生成微信二维码 <3>最终支付 流程:如收费课程,点立即购买生成订单,点去支付生成二维码
+支付之后,每隔3秒钟 查询支付状态,如没成功 等待.如成功 更新订单状态,向记录表添加支付成功记录
+
+前后端分离开发
+前端技术点:
+(1) vue
+(2) Element-UI
+(3)nodejs
+(4)NPM
+(5)Babel
+(6)前端模块化
+(7)后台使用vue-admin-template
+(8)前台使用Nuxt
+(9)Echarts图表工具
+
+后端技术点:
+1.微服务架构
+2.SpringBoot Spring的脚手架
+3.SpringCloud <1>nacos <2>Feign 服务调用 <3>gateway网关 <4>熔断器Hystrix
+4.MybatisPlus
+5.EasyExcel
+6.SpringSecurity 权限管理
+7.redis 不太重要的放进redis作为缓存 redistemplate
+8.Nginx <1> 反向代理 <2>请求分发
+9.OAuth2+JWT
+10.HttpClient <1> 发送请求返回响应的工具 不需要浏览器
+11.Cookie
+12.微信登录
+13.微信支付
+14.阿里云OSS 视频点播 短信服务
+15.Git
+16.Docker
+17.Jenkins
+
+pb:1.路由切换问题 (1)多次路由跳转到同一个vue页面 create方法只执行一次 (2)解决方案:使用vue监听 watch:{}方法
+2.ES6模块化
+3.mp生成19id值
+4.跨域问题 <1>网关解决 <2>crossorigin注解
+5.413问题 nginx文件大小限制,请求体过大
+
+在线教育系统，分为前台网站系统和后台运营平台，B2C模式。
+前台用户系统包括课程、讲师、问答、文章几大大部分，使用了微服务技术架构，前后端分离开发。
+后端的主要技术架构是：SpringBoot + SpringCloud + MyBatis-Plus + HttpClient + MySQL +
+Maven+EasyExcel+ nginx
+前端的架构是：Node.js + Vue.js +element-ui+NUXT+ECharts
+其他涉及到的中间件包括Redis、阿里云OSS、阿里云视频点播
+业务中使用了ECharts做图表展示，使用EasyExcel完成分类批量添加、注册分布式单点登录使用了JWT

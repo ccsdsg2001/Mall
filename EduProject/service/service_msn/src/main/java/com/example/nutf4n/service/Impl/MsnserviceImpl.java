@@ -40,8 +40,8 @@ public class MsnserviceImpl implements Msnservice {
         request.setAction("SendSms");
 //param
         request.putQueryParameter("PhoneNumbers", phone);
-        request.putQueryParameter("SignName", "阿里云短信测试"); //signname
-        request.putQueryParameter("TemplateCode", "SMS_154950909");//module name
+        request.putQueryParameter("SignName", "我的商家后台管理系统"); //signname
+        request.putQueryParameter("TemplateCode", "SMS_268680717");//module name
         request.putQueryParameter("TemplateParam",
                 JSONObject.toJSONString(param));
 

@@ -7,7 +7,7 @@ import com.aliyuncs.vod.model.v20170321.DeleteVideoResponse;
 import com.aliyuncs.vod.model.v20170321.GetVideoPlayAuthRequest;
 import com.aliyuncs.vod.model.v20170321.GetVideoPlayAuthResponse;
 import com.example.R;
-import com.example.exception.fuliexception;
+
 import com.example.vod.service.VodService;
 import com.example.vod.utils.ConstantUtils;
 import com.example.vod.utils.InitVodClient;
@@ -23,7 +23,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/eduvod/video")
-@CrossOrigin
+//@CrossOrigin
 public class VodController {
 
     @Autowired

@@ -45,7 +45,7 @@ import org.springframework.web.util.pattern.PathPatternParser;
  * @author wangpeng
  * @date 2019/01/02
  */
-//@Configuration
+@Configuration
 public class CorsConfig {
     @Bean
     public CorsWebFilter corsFilter() {

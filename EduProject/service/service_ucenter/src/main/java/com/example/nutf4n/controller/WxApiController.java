@@ -1,7 +1,7 @@
 package com.example.nutf4n.controller;
 
 import com.example.JwtUtils;
-import com.example.exception.fuliexception;
+
 import com.example.nutf4n.entity.UcenterMember;
 import com.example.nutf4n.service.UcenterMemberService;
 import com.google.gson.Gson;
@@ -20,7 +20,7 @@ import java.util.HashMap;
  * @date 2023年01月29日 16:37
  */
 
-@CrossOrigin
+//@CrossOrigin
 @Controller
 @RequestMapping("/api/ucenter/wx")
 public class WxApiController {

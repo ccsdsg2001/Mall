@@ -1,8 +1,9 @@
 package com.atguigu.serurity.filter;
 
 import com.atguigu.serurity.security.TokenManager;
-import com.example.R;
-import com.example.ResponseUtil;
+
+import example.R;
+import example.ResponseUtil;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

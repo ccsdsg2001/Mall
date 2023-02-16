@@ -9,7 +9,8 @@ import com.example.demo.edu.mapper.ChapterMapper;
 import com.example.demo.edu.service.ChapterService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.example.demo.edu.service.VideoService;
-import com.example.exception.fuliexception;
+
+
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

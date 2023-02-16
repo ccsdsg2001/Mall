@@ -19,7 +19,9 @@ import com.example.demo.edu.service.CourseDescriptionService;
 
 import com.example.demo.edu.service.EduCourseService;
 import com.example.demo.edu.service.VideoService;
-import com.example.exception.fuliexception;
+
+
+
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;

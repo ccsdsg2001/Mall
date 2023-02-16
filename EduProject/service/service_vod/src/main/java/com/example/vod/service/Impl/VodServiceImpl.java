@@ -8,7 +8,7 @@ import com.aliyun.vod.upload.resp.UploadStreamResponse;
 import com.aliyuncs.DefaultAcsClient;
 import com.aliyuncs.vod.model.v20170321.DeleteVideoRequest;
 import com.example.R;
-import com.example.exception.fuliexception;
+
 import com.example.vod.service.VodService;
 import com.example.vod.utils.ConstantUtils;
 import com.example.vod.utils.InitVodClient;

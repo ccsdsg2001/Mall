@@ -7,6 +7,8 @@ import java.util.Date;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import java.io.Serializable;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -65,10 +67,12 @@ public class UcenterMember implements Serializable {
 
     @ApiModelProperty(value = "创建时间")
     @TableField(fill = FieldFill.INSERT)
+    @JsonFormat(locale="zh", timezone="GMT+8", pattern="yyyy-MM-dd")
     private Date gmtCreate;
 
     @ApiModelProperty(value = "更新时间")
     @TableField(fill = FieldFill.INSERT_UPDATE)
+    @JsonFormat(locale="zh", timezone="GMT+8", pattern="yyyy-MM-dd")
     private Date gmtModified;
 
 

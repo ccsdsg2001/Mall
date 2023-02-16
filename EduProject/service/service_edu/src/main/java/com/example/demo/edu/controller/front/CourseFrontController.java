@@ -1,5 +1,6 @@
 package com.example.demo.edu.controller.front;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.example.JwtUtils;
 import com.example.R;
@@ -10,6 +11,7 @@ import com.example.demo.edu.entity.frontvo.CourseQueryVo;
 import com.example.demo.edu.entity.frontvo.CourseWebVo;
 import com.example.demo.edu.service.ChapterService;
 import com.example.demo.edu.service.EduCourseService;
+
 import com.example.ordervo.CourseWebVoOrder;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +27,7 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("/eduservice/coursefront")
-@CrossOrigin
+//@CrossOrigin
 public class CourseFrontController {
     
     @Autowired
@@ -38,7 +40,7 @@ public class CourseFrontController {
     private OrderClient orderClient;
 
     //select by page
-    @PostMapping("/getFrontCourseList/{page}/{limit}")
+    @PostMapping("getFrontCourseList/{page}/{limit}")
     public R geytpage(@PathVariable long page, @PathVariable long limit, @RequestBody(required = false) CourseQueryVo courseQueryVo){
         Page<EduCourse> pageCourse = new Page<>(page,limit);
 
@@ -55,10 +57,13 @@ public class CourseFrontController {
         //title by courseid
         List<ChapterVo> chapterVideoByCourseId = chapterService.getChapterVideoByCourseId(courseId);
         //get order status
-        boolean isbuy = orderClient.isbuy(courseId, JwtUtils.getMemberIdByJwtToken(request));
+        boolean isbuy = orderClient.isBuy(courseId, JwtUtils.getMemberIdByJwtToken(request));
         return R.ok().data("courseWebVo",courseWebVo).data("chapterVideoList",chapterVideoByCourseId).data("isBuy",isbuy);
 
     }
+
+
+    //不做微服務調用 直接調用
 
 
     //courseInfo by courseId

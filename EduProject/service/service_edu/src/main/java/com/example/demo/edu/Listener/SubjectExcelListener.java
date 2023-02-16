@@ -6,7 +6,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.example.demo.edu.entity.EduSubject;
 import com.example.demo.edu.entity.excel.SubjectData;
 import com.example.demo.edu.service.EduSubjectService;
-import com.example.exception.fuliexception;
+
 
 
 /**

@@ -280,3 +280,77 @@ Caused by: java.io.IOException: 你的主机中的软件中止了一个已建立
                 com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
 2023-02-04 15:55:45.389 [main] WARN 
                 com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2023-02-08 15:11:11.697 [main] WARN 
+                com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2023-02-08 15:11:11.703 [main] WARN 
+                com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2023-02-08 15:25:44.364 [main] WARN 
+                com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2023-02-08 15:25:44.370 [main] WARN 
+                com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2023-02-08 22:33:32.834 [main] WARN 
+                com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2023-02-08 22:33:32.839 [main] WARN 
+                com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2023-02-08 22:43:24.514 [main] WARN 
+                com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2023-02-08 22:43:24.523 [main] WARN 
+                com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2023-02-09 20:55:39.244 [main] WARN 
+                com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2023-02-09 20:55:39.250 [main] WARN 
+                com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2023-02-09 21:07:38.472 [main] WARN 
+                com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2023-02-09 21:07:38.475 [main] WARN 
+                com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2023-02-09 21:16:11.966 [main] WARN 
+                com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2023-02-09 21:16:11.970 [main] WARN 
+                com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2023-02-10 14:35:00.509 [main] WARN 
+                com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2023-02-10 14:35:00.526 [main] WARN 
+                com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2023-02-10 14:51:53.262 [main] WARN 
+                com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2023-02-10 14:51:53.266 [main] WARN 
+                com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2023-02-10 14:55:37.906 [main] WARN 
+                com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2023-02-10 14:55:37.910 [main] WARN 
+                com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2023-02-10 14:58:46.864 [main] WARN 
+                com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2023-02-10 14:58:46.869 [main] WARN 
+                com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2023-02-10 14:59:54.827 [main] WARN 
+                com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2023-02-10 14:59:54.995 [main] WARN 
+                com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2023-02-10 15:09:09.298 [main] WARN 
+                o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'service-ucenter.FeignClientSpecification' defined in null: Cannot register bean definition [Generic bean: class [org.springframework.cloud.openfeign.FeignClientSpecification]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] for bean 'service-ucenter.FeignClientSpecification': There is already [Generic bean: class [org.springframework.cloud.openfeign.FeignClientSpecification]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] bound.
+2023-02-10 15:10:43.562 [main] WARN 
+                com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2023-02-10 15:10:43.566 [main] WARN 
+                com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2023-02-10 21:09:18.103 [main] WARN 
+                com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2023-02-10 21:09:18.109 [main] WARN 
+                com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2023-02-10 21:37:50.721 [main] WARN 
+                com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2023-02-10 21:37:50.731 [main] WARN 
+                com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2023-02-11 19:06:02.969 [main] WARN 
+                com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2023-02-11 19:06:03.046 [main] WARN 
+                com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2023-02-12 18:30:38.450 [main] WARN 
+                com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2023-02-12 18:30:38.468 [main] WARN 
+                com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2023-02-13 18:24:32.768 [main] WARN 
+                com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2023-02-13 18:24:32.779 [main] WARN 
+                com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
